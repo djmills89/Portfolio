@@ -1,6 +1,20 @@
 body {
-  background: #111;
-  color: white;
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.container {
+  height: 50vh;
+  width: 500px;
+}
+.container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.container button {
+  background-color: #333333;
+  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=styles.css.map */

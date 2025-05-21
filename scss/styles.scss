@@ -1,4 +1,33 @@
+//Neutral Colors
+$charcoal: #333333;
+$light-gray: #d3d3d3;
+$medium-gray: #777777;
+
+//Accent Colors
+$hunter-green: #355e3b;
+$crimson: #8b0000;
+
+//Other Colors
+$background: #1e1e1e;
+$text-light: #f0f0f0;
+
 body {
-  background: #111;
-  color: white;
+  background: $background;
+  color: $text-light;
+}
+
+.container {
+    height: 50vh;
+    width: 500px;
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    button {
+        background-color: $charcoal;
+        color: $text-light;
+    }
 }
