@@ -30,15 +30,24 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">Title</h1>
+                    <h1 class="modal-title">Contact Form</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Text here</p>
+                    <form class="row g-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name">
+                        </div>
+                        <input type="tel" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+                    </form>
                 </div>
                 <div class="modal-footer">
+                    <span class="me-5" id="confirmation"></span>
                     <botton class="btn btn-secondary" data-bs-dismiss="modal">Close</botton>
-                    <button class="btn btn-primary">Save changes</button>
+                    <button class="btn btn-primary" id="contactBtn">Contact!</button>
                 </div>
             </div>
         </div>
