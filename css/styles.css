@@ -22,5 +22,8 @@ body {
   background-color: #8b0000;
   color: #d3d3d3;
 }
+.container #hiddenText {
+  display: none;
+}
 
 /*# sourceMappingURL=styles.css.map */
