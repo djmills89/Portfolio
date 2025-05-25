@@ -11,7 +11,10 @@ class ProfileCard extends HTMLElement {
         const $contact = $card.find('.contact')
         const $hidden = $card.find('.hiddenText')
 
-        $button.on('click', () => $hidden.toggle())
+        $button.on('click', () => {
+           $hidden.toggle()
+           $button.text() === 'Show More' ? $button.text('Show Less') : $button.text('Show More')
+        })
         $contact.on('click', () => {
             const profileName = this.getAttribute('name')
 
