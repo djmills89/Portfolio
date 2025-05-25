@@ -25,7 +25,29 @@
         </div>
      </template>
 
-        <div class="modal" id="exampleModal" tabindex="-1">
+        
+     <!-- Hayden Baca Profile Card -->
+     <profile-card
+        name="Hayden Baca"
+        bio="Appian Developer"
+        img="./images/logo.gif"
+        hidden-text="This is meant to be hidden."
+        show-more="Show More"
+        contact="Contact">
+    </profile-card>
+
+    <!-- Daniel Mills Profile Card -->
+    <profile-card
+        name="Daniel Mills"
+        bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
+        img="./images/logo.gif"
+        hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
+        show-more="Show More"
+        contact="Contact">
+    </profile-card>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -51,26 +73,6 @@
             </div>
         </div>
      </div>
-
-     <profile-card
-        name="Hayden Baca"
-        bio="Appian Developer"
-        img="./images/logo.gif"
-        hidden-text="This is meant to be hidden."
-        show-more="Show More"
-        contact="Contact">
-    </profile-card>
-
-    <profile-card
-        name="Daniel Mills"
-        bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
-        img="./images/logo.gif"
-        hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
-        show-more="Show More"
-        contact="Contact">
-    </profile-card>
-
-
     
 
 
@@ -81,22 +83,3 @@
      <script src="./script/script.js"></script>
     </body>
 </html>
-
-
-
-    <!-- profile card -->
-     <!-- <div class="container d-flex flex-column justify-content-center">
-        <div class="card" style="width: 18em;">
-            <img src="images/logo.gif" class="card-img-top" alt="profile image" srcset="">
-            <div class="card-body">
-                <h2 class="card-title">Daniel Mills</h2>
-                <p class="card-text">
-                    Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is
-                    hoping this might help get a job
-                </p>
-                <p id="hiddenText">This text is meant to be hidden, toggled when the show more button is pressed.</p>
-                <button class="btn ms-4" id="showMore">Show More</button>
-                <button class="btn" id="contact" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button>
-            </div>
-        </div>
-     </div> -->
