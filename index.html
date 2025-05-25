@@ -9,6 +9,31 @@
 </head>
 <body>
 
+    <!-- profile card template -->
+     <template id="profileCardTemplate">
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="card" style="width: 18em;">
+                <img src="" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title"></h2>
+                    <p class="card-text"></p>
+                    <p id="hiddenText"></p>
+                    <button class="btn ms-4" id="showMore">Show More</button>
+                    <button class="btn" id="contact">Contact</button>
+                </div>
+            </div>
+        </div>
+     </template>
+
+     <profile-card
+        name="Hayden Baca"
+        bio="Appian Developer"
+        img="./images/logo.gif"
+        hidden-text="This is meant to be hidden."
+        show-more="Show More"
+        contact="Contact">
+    </profile-card>
+
     <!-- profile card -->
      <div class="container d-flex flex-column justify-content-center">
         <div class="card" style="width: 18em;">
