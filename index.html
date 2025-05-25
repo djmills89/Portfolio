@@ -17,41 +17,15 @@
                 <div class="card-body">
                     <h2 class="card-title"></h2>
                     <p class="card-text"></p>
-                    <p id="hiddenText"></p>
-                    <button class="btn ms-4" id="showMore">Show More</button>
-                    <button class="btn" id="contact">Contact</button>
+                    <p class="hiddenText"></p>
+                    <button class="btn ms-4 showMore">Show More</button>
+                    <button class="btn contact" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button>
                 </div>
             </div>
         </div>
      </template>
 
-     <profile-card
-        name="Hayden Baca"
-        bio="Appian Developer"
-        img="./images/logo.gif"
-        hidden-text="This is meant to be hidden."
-        show-more="Show More"
-        contact="Contact">
-    </profile-card>
-
-    <!-- profile card -->
-     <div class="container d-flex flex-column justify-content-center">
-        <div class="card" style="width: 18em;">
-            <img src="images/logo.gif" class="card-img-top" alt="profile image" srcset="">
-            <div class="card-body">
-                <h2 class="card-title">Daniel Mills</h2>
-                <p class="card-text">
-                    Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is
-                    hoping this might help get a job
-                </p>
-                <p id="hiddenText">This text is meant to be hidden, toggled when the show more button is pressed.</p>
-                <button class="btn ms-4" id="showMore">Show More</button>
-                <button class="btn" id="contact" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button>
-            </div>
-        </div>
-     </div>
-    
-     <div class="modal" id="exampleModal" tabindex="-1">
+        <div class="modal" id="exampleModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -71,12 +45,34 @@
                 </div>
                 <div class="modal-footer">
                     <span class="me-5" id="confirmation"></span>
-                    <botton class="btn btn-secondary" data-bs-dismiss="modal">Close</botton>
+                    <button class="btn btn-secondary close" data-bs-dismiss="modal" onclick="window.location.reload()">Close</button>
                     <button class="btn btn-primary" id="contactBtn">Contact!</button>
                 </div>
             </div>
         </div>
      </div>
+
+     <profile-card
+        name="Hayden Baca"
+        bio="Appian Developer"
+        img="./images/logo.gif"
+        hidden-text="This is meant to be hidden."
+        show-more="Show More"
+        contact="Contact">
+    </profile-card>
+
+    <profile-card
+        name="Daniel Mills"
+        bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
+        img="./images/logo.gif"
+        hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
+        show-more="Show More"
+        contact="Contact">
+    </profile-card>
+
+
+    
+
 
     <!-- jquery -->
      <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
@@ -85,3 +81,22 @@
      <script src="./script/script.js"></script>
     </body>
 </html>
+
+
+
+    <!-- profile card -->
+     <!-- <div class="container d-flex flex-column justify-content-center">
+        <div class="card" style="width: 18em;">
+            <img src="images/logo.gif" class="card-img-top" alt="profile image" srcset="">
+            <div class="card-body">
+                <h2 class="card-title">Daniel Mills</h2>
+                <p class="card-text">
+                    Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is
+                    hoping this might help get a job
+                </p>
+                <p id="hiddenText">This text is meant to be hidden, toggled when the show more button is pressed.</p>
+                <button class="btn ms-4" id="showMore">Show More</button>
+                <button class="btn" id="contact" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button>
+            </div>
+        </div>
+     </div> -->
