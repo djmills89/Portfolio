@@ -11,8 +11,8 @@
 
     <!-- profile card template -->
      <template id="profileCardTemplate">
-        <div class="container d-flex flex-column justify-content-center">
-            <div class="card" style="width: 18em;">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card col" style="width: 18em;">
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                     <h2 class="card-title"></h2>
@@ -26,25 +26,30 @@
      </template>
 
         
-     <!-- Hayden Baca Profile Card -->
-     <profile-card
-        name="Hayden Baca"
-        bio="Appian Developer"
-        img="./images/logo.gif"
-        hidden-text="This is meant to be hidden."
-        show-more="Show More"
-        contact="Contact">
-    </profile-card>
+     <div class="container d-flex flex-column justify-content-center">
+        <div class="row">
+          <!-- Hayden Baca Profile Card -->
+        <profile-card
+            name="Hayden Baca"
+            bio="Appian Developer"
+            img="./images/logo.gif"
+            hidden-text="This is meant to be hidden."
+            show-more="Show More"
+            contact="Contact">
+        </profile-card>
 
-    <!-- Daniel Mills Profile Card -->
-    <profile-card
-        name="Daniel Mills"
-        bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
-        img="./images/logo.gif"
-        hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
-        show-more="Show More"
-        contact="Contact">
-    </profile-card>
+        <!-- Daniel Mills Profile Card -->
+        <profile-card
+            name="Daniel Mills"
+            bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
+            img="./images/logo.gif"
+            hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
+            show-more="Show More"
+            contact="Contact">
+        </profile-card>
+        </div>
+      </div>
+
 
     <!-- Contact Form Modal -->
     <div class="modal" id="exampleModal" tabindex="-1">
