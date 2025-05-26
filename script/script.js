@@ -45,3 +45,9 @@ $('#contactBtn').on('click', () => {
         $('#confirmation').text(`Confirmed! Message sent to ${person}`).css('color', 'green')
     }
 })
+
+const modal = document.querySelector('.modal')
+modal.addEventListener('hidden.bs.modal', () => {
+    modal.querySelectorAll('input').forEach(input => input.value = '')
+    document.getElementById('confirmation').textContent = ''
+})
