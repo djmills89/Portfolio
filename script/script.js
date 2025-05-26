@@ -6,21 +6,20 @@ class ProfileCard extends HTMLElement {
 
         this.appendChild(template)
 
-        const $card = $(this)
-        const $button = $card.find('.showMore')
-        const $contact = $card.find('.contact')
-        const $hidden = $card.find('.hiddenText')
+        const button = this.querySelector('.showMore')
+        const contact = this.querySelector('.contact')
+        const hidden = this.querySelector('.hiddenText')
 
-        $button.on('click', () => {
-           $hidden.toggle()
-           $button.text() === 'Show More' ? $button.text('Show Less') : $button.text('Show More')
+        button.addEventListener('click', () => {
+           hidden.classList.toggle('hiddenText')
+           button.textContent = button.textContent === 'Show More' ? 'Show Less' : 'Show More'
         })
-        $contact.on('click', () => {
+        contact.addEventListener('click', () => {
             const profileName = this.getAttribute('name')
+            const modal = document.querySelector('.modal')
+            modal.setAttribute('data-profile', profileName)
 
-            $('.modal').attr('data-profile', profileName)
-
-            console.log(profileName, $('.modal').data('targetPerson', profileName))
+            console.log(profileName)
         })
 
         this.querySelector('.card-text').textContent = this.getAttribute('bio')
