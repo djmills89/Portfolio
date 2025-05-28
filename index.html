@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,30 +25,31 @@
         </div>
      </template>
 
-        
-     <div class="container d-flex flex-column justify-content-center">
-        <div class="row">
-          <!-- Hayden Baca Profile Card -->
-        <profile-card
-            name="John Smith"
-            bio="Front End Developer"
-            img="./images/logo.gif"
-            hidden-text="This is meant to be hidden."
-            show-more="Show More"
-            contact="Contact">
-        </profile-card>
+     <div class="box">
+        <header>
+            <h1>Daniel Mills</h1>
+            <nav>
+                <div>
+                    <div>
+                        <ul>
+                            <li class="nav-item">Home</li>
+                            <li class="nav-item">Projects</li>
+                            <li class="nav-item">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-        <!-- Daniel Mills Profile Card -->
-        <profile-card
-            name="Daniel Mills"
-            bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
-            img="./images/logo.gif"
-            hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
-            show-more="Show More"
-            contact="Contact">
-        </profile-card>
-        </div>
-      </div>
+            <p>
+                <label for="darkMode">Dark Mode</label>
+                <input type="radio" name="toggleMode" id="darkMode" value="dark" checked>
+                <label for="lightMode">Light Mode</label>
+                <input type="radio" name="toggleMode" id="lightMode" value="light">
+            </p>
+        </header>
+     </div>
+        
+
 
 
     <!-- Contact Form Modal -->
@@ -88,3 +89,27 @@
      <script src="./script/script.js"></script>
     </body>
 </html>
+
+     <div class="container d-flex flex-column justify-content-center">
+        <div class="row">
+          <!-- Hayden Baca Profile Card -->
+        <profile-card
+            name="John Smith"
+            bio="Front End Developer"
+            img="./images/logo.gif"
+            hidden-text="This is meant to be hidden."
+            show-more="Show More"
+            contact="Contact">
+        </profile-card>
+
+        <!-- Daniel Mills Profile Card -->
+        <profile-card
+            name="Daniel Mills"
+            bio="Daniel Mills is a guy that is currently creating Bootstrap and JQuery stuff.  He is hoping this might help get a job"
+            img="./images/logo.gif"
+            hidden-text="This text is meant to be hidden, toggled when the show more button is pressed."
+            show-more="Show More"
+            contact="Contact">
+        </profile-card>
+        </div>
+      </div>

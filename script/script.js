@@ -33,7 +33,13 @@ class ProfileCard extends HTMLElement {
 
 customElements.define('profile-card', ProfileCard)
 
-
+//Variables
+const $radios = $('input[name="toggleMode"]')
+$radios.on('change', function() {
+    const theme = $(this).val()
+    $('html').attr('data-theme', theme)
+    console.log(theme)
+})
 
 $('#contactBtn').on('click', () => {
     const person = $('.modal').data('profile')

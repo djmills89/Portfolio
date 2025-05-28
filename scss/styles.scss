@@ -2,6 +2,7 @@
 $charcoal: #333333;
 $light-gray: #d3d3d3;
 $medium-gray: #777777;
+$warm-white: #f7f5f2;
 
 //Accent Colors
 $hunter-green: #355e3b;
@@ -10,15 +11,50 @@ $crimson: #8b0000;
 //Other Colors
 $background: #1e1e1e;
 $text-light: #f0f0f0;
+$shadow: rgba(0,0,0,0.4);
 
-body {
-  background: $background;
-  color: $text-light;
+//Layout
+$pad: max(20px, 4vmin);
+
+$themes: (
+    light: (
+        background: #f7f5f2,
+        text: #333333,
+        border: #333333
+    ),
+    dark: (
+        background: #333333,
+        text: #f7f5f2,
+        border: #f7f5f2
+    )
+);
+
+@mixin theme($theme-name) {
+    $theme: map-get($themes, $theme-name);
+
+    background-color: map-get($theme, background);
+    color: map-get($theme, text);
+
+    .box {
+        border: 1px solid map-get($theme, border);
+        color: map-get($theme, text)
+    }
+}
+
+[data-theme="light"] {
+    @include theme(light);
+}
+
+[data-theme="dark"] {
+    @include theme(dark)
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
-    // height: 50vh;
-    // width: 500px;
 
     img {
         width: 95%;
@@ -42,5 +78,22 @@ body {
 
     .hiddenText {
         display: none;
+    }
+}
+
+.box {
+    border: 1px solid $warm-white;
+    width: 90%;
+    margin: 0 auto;
+    top: $pad;
+    bottom: $pad;
+    left: $pad;
+    right: $pad;
+    position: fixed;
+    
+
+    header {
+        margin: max(5px, 2vmin);
+        padding: 20px;
     }
 }
