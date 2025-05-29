@@ -58,4 +58,18 @@
   padding: 20px;
 }
 
+#static-overlay {
+  position: fixed;
+  inset: 0;
+  background: url("../images/static.gif");
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.1s ease-in;
+}
+#static-overlay.active {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=styles.css.map */

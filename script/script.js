@@ -36,8 +36,21 @@ customElements.define('profile-card', ProfileCard)
 //Variables
 const $radios = $('input[name="toggleMode"]')
 $radios.on('change', function() {
-    const theme = $(this).val()
-    $('html').attr('data-theme', theme)
+    //show static briefly
+    const theme = this.value
+    const themeWrapper = document.getElementById('theme-wrapper')
+    const overlay = document.getElementById('static-overlay')
+    overlay.classList.add('active')
+
+    //change the theme
+    async function changeStyles() {
+        await new Promise(resolve => setTimeout(resolve, 70))
+        overlay.classList.remove('active')
+
+        document.querySelector('html').setAttribute('data-theme', theme)
+    }
+
+    changeStyles()
 })
 
 $('#contactBtn').on('click', () => {
