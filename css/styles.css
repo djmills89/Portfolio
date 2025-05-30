@@ -9,13 +9,15 @@
   transition: border-color 1s ease, color 1s ease;
 }
 [data-theme=light] .theme-toggle[data-theme=light] {
-  background: #333333;
+  background-color: #333333;
   color: #f7f5f2;
+  transition: background-color 1s ease, color 1s ease;
 }
 [data-theme=light] .theme-toggle[data-theme=dark] {
-  background: #f7f5f2;
+  background-color: #f7f5f2;
   color: #333333;
   border-color: #333333;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
 }
 
 [data-theme=dark] body {
@@ -29,13 +31,15 @@
   transition: border-color 1s ease, color 1s ease;
 }
 [data-theme=dark] .theme-toggle[data-theme=light] {
-  background: #f7f5f2;
+  background-color: #f7f5f2;
   color: #333333;
+  transition: background-color 1s ease, color 1s ease;
 }
 [data-theme=dark] .theme-toggle[data-theme=dark] {
-  background: #333333;
+  background-color: #333333;
   color: #f7f5f2;
   border-color: #f7f5f2;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
 }
 
 * {
@@ -66,8 +70,6 @@
 }
 
 .box {
-  border: 8px solid #f7f5f2;
-  width: 90%;
   margin: 0 auto;
   top: max(20px, 4vmin);
   bottom: max(20px, 4vmin);

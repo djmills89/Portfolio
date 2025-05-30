@@ -49,28 +49,36 @@ $themes: (
 [data-theme="light"] {
     @include theme(light);
 
-    .theme-toggle[data-theme="light"] {
-        background: $charcoal;
-        color: $warm-white;
-    }
-    .theme-toggle[data-theme="dark"] {
-        background: $warm-white;
-        color: $charcoal;
-        border-color: $charcoal
+    .theme-toggle {
+        &[data-theme="light"] {
+            background-color: $charcoal;
+            color: $warm-white;
+            transition: background-color 1s ease, color 1s ease;
+        }
+        &[data-theme="dark"] {
+            background-color: $warm-white;
+            color: $charcoal;
+            border-color: $charcoal;
+            transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+        }
     }
 }
 
 [data-theme="dark"] {
     @include theme(dark);
 
-    .theme-toggle[data-theme="light"] {
-        background: $warm-white;
-        color: $charcoal;
-    }
-    .theme-toggle[data-theme="dark"] {
-        background: $charcoal;
-        color: $warm-white;
-        border-color: $warm-white;
+    .theme-toggle {
+        &[data-theme="light"] {
+            background-color: $warm-white;
+            color: $charcoal;
+            transition: background-color 1s ease, color 1s ease;
+        }
+        &[data-theme="dark"] {
+            background-color: $charcoal;
+            color: $warm-white;
+            border-color: $warm-white;
+            transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+        }
     }
 }
 
@@ -108,8 +116,6 @@ $themes: (
 }
 
 .box {
-    border: 8px solid $warm-white;
-    width: 90%;
     margin: 0 auto;
     top: $pad;
     bottom: $pad;
