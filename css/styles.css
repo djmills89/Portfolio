@@ -1,18 +1,38 @@
-[data-theme=light] {
+[data-theme=light] body {
   background-color: #f7f5f2;
   color: #333333;
+  transition: background-color 1s ease, color 1s ease;
 }
 [data-theme=light] .box {
   border: 1px solid #333333;
   color: #333333;
+  transition: border-color 1s ease, color 1s ease;
+}
+[data-theme=light] .theme-toggle[data-theme=light] {
+  background: #333333;
+  color: #f7f5f2;
+}
+[data-theme=light] .theme-toggle[data-theme=dark] {
+  background: #f7f5f2;
+  color: #333333;
 }
 
-[data-theme=dark] {
+[data-theme=dark] body {
   background-color: #333333;
   color: #f7f5f2;
+  transition: background-color 1s ease, color 1s ease;
 }
 [data-theme=dark] .box {
   border: 1px solid #f7f5f2;
+  color: #f7f5f2;
+  transition: border-color 1s ease, color 1s ease;
+}
+[data-theme=dark] .theme-toggle[data-theme=light] {
+  background: #f7f5f2;
+  color: #333333;
+}
+[data-theme=dark] .theme-toggle[data-theme=dark] {
+  background: #333333;
   color: #f7f5f2;
 }
 
@@ -44,7 +64,7 @@
 }
 
 .box {
-  border: 1px solid #f7f5f2;
+  border: 8px solid #f7f5f2;
   width: 90%;
   margin: 0 auto;
   top: max(20px, 4vmin);
@@ -56,20 +76,6 @@
 .box header {
   margin: max(5px, 2vmin);
   padding: 20px;
-}
-
-#static-overlay {
-  position: fixed;
-  inset: 0;
-  background: url("../images/static.gif");
-  background-size: cover;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transition: opacity 0.1s ease-in;
-}
-#static-overlay.active {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

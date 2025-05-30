@@ -33,24 +33,13 @@ class ProfileCard extends HTMLElement {
 
 customElements.define('profile-card', ProfileCard)
 
-//Variables
-const $radios = $('input[name="toggleMode"]')
-$radios.on('change', function() {
-    //show static briefly
-    const theme = this.value
-    const themeWrapper = document.getElementById('theme-wrapper')
-    const overlay = document.getElementById('static-overlay')
-    overlay.classList.add('active')
 
-    //change the theme
-    async function changeStyles() {
-        await new Promise(resolve => setTimeout(resolve, 70))
-        overlay.classList.remove('active')
-
+const buttons = document.querySelectorAll('button[data-theme]')
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-theme')
         document.querySelector('html').setAttribute('data-theme', theme)
-    }
-
-    changeStyles()
+    })
 })
 
 $('#contactBtn').on('click', () => {

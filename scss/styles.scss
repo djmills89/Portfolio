@@ -33,22 +33,45 @@ $themes: (
 @mixin theme($theme-name) {
     $theme: map.get($themes, $theme-name);
 
-    background-color: map.get($theme, background);
-    color: map.get($theme, text);
-
+    body {
+        background-color: map.get($theme, background);
+        color: map.get($theme, text);
+        transition: background-color 1s ease, color 1s ease;
+    }
+    
     .box {
         border: 1px solid map-get($theme, border);
         color: map.get($theme, text);
+        transition: border-color 1s ease, color 1s ease
     }
 }
 
 [data-theme="light"] {
     @include theme(light);
+
+    .theme-toggle[data-theme="light"] {
+        background: $charcoal;
+        color: $warm-white;
+    }
+    .theme-toggle[data-theme="dark"] {
+        background: $warm-white;
+        color: $charcoal;
+    }
 }
 
 [data-theme="dark"] {
     @include theme(dark);
+
+    .theme-toggle[data-theme="light"] {
+        background: $warm-white;
+        color: $charcoal;
+    }
+    .theme-toggle[data-theme="dark"] {
+        background: $charcoal;
+        color: $warm-white;
+    }
 }
+
 
 * {
     margin: 0;
@@ -83,7 +106,7 @@ $themes: (
 }
 
 .box {
-    border: 1px solid $warm-white;
+    border: 8px solid $warm-white;
     width: 90%;
     margin: 0 auto;
     top: $pad;
@@ -96,20 +119,5 @@ $themes: (
     header {
         margin: max(5px, 2vmin);
         padding: 20px;
-    }
-}
-
-#static-overlay {
-    position: fixed;
-    inset: 0;
-    background: url('../images/static.gif');
-    background-size: cover;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transition: opacity 0.1s ease-in;
-
-    &.active {
-        opacity: 1;
     }
 }
