@@ -56,6 +56,7 @@ $themes: (
     .theme-toggle[data-theme="dark"] {
         background: $warm-white;
         color: $charcoal;
+        border-color: $charcoal
     }
 }
 
@@ -69,6 +70,7 @@ $themes: (
     .theme-toggle[data-theme="dark"] {
         background: $charcoal;
         color: $warm-white;
+        border-color: $warm-white;
     }
 }
 
